@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\LearnDotNet7_WebAPI.props" />
+</Project>
