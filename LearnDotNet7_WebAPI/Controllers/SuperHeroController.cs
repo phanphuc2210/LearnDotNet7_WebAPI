@@ -49,5 +49,20 @@ namespace LearnDotNet7_WebAPI.Controllers
             superHeroes.Add(hero);
             return Ok(superHeroes);
         }
+
+        [HttpPut("{id}")]
+        public async Task<ActionResult<SuperHero>> UpdateHero(int id, SuperHero request)
+        {
+            var hero = superHeroes.Find(x => x.Id == id);
+            if (hero == null)
+                return NotFound("Sorry, but this hero doesn't exist.");
+
+            hero.Name= request.Name;
+            hero.FirstName= request.FirstName;
+            hero.LastName= request.LastName;
+            hero.Place= request.Place;
+
+            return Ok(hero);
+        }
     }
 }
