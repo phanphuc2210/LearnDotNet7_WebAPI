@@ -13,7 +13,7 @@ namespace LearnDotNet7_WebAPI.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=.\\SQLExpress;Database=superherodb;Trusted_Connection=true;TrustServerCertificate=true;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-9P6KKK7;Database=superherodb;Trusted_Connection=true;TrustServerCertificate=true;");
         }
 
         public DbSet<SuperHero> SuperHeroes { get; set; }
